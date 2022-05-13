@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Authors>Franz</Authors>
+    <Company></Company>
+    <Version>0.0.0.5</Version>
+    <Description>Exactly what the name says.</Description>
+    <Copyright></Copyright>
+    <PackageProjectUrl>https://github.com/reiichi001/CrashFFXIVPlugin</PackageProjectUrl>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Platforms>x64</Platforms>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DalamudLibPath>$(appdata)\XIVLauncher\addon\Hooks\dev\</DalamudLibPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DalamudPackager" Version="2.1.7" />
+    <Reference Include="Dalamud">
+        <HintPath>$(DalamudLibPath)Dalamud.dll</HintPath>
+        <Private>false</Private>
+    </Reference>
+    <Reference Include="FFXIVClientStructs">
+	    <HintPath>$(DalamudLibPath)FFXIVClientStructs.dll</HintPath>
+	    <Private>false</Private>
+    </Reference>
+	<Reference Include="Newtonsoft.Json">
+		<HintPath>$(DalamudLibPath)Newtonsoft.Json.dll</HintPath>
+		<Private>false</Private>
+	</Reference>
+
+	  
+  </ItemGroup>
+
+</Project>
